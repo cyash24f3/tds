@@ -9,4 +9,4 @@ gunicorn==21.2.0
 pytest==7.4.3
 fastapi==0.104.1
 requests==2.31.0
-pandas==2.1.2
+pandas==3.0.1
