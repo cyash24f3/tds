@@ -1,15 +1,24 @@
 {
   "name": "ga2-62243f",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "version": "latest"
+    }
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "astral-sh.uv",
         "ms-python.python"
-      ]
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvInSelectedTerminal": true
+      }
     }
   },
-  "postCreateCommand": "uv pip install fastapi"
+  "postCreateCommand": "uv pip install --system fastapi",
+  "remoteUser": "vscode"
 }
