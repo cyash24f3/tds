@@ -12,13 +12,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache dependencies
-        # This ID is used to reference the outputs of this specific step
-        id: cache-step 
+        id: cache-step
         uses: actions/cache@v4
         with:
           path: ~/.cache/dependencies
           key: cache-1ad7459
 
       - name: prime-cache-1ad7459
-        # This step name must exist exactly as requested
+        id: prime-cache-1ad7459
         run: echo "Cache hit ${{ steps.cache-step.outputs.cache-hit }}"
