@@ -1,0 +1,30 @@
+name: Hello World
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 24f3003380@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+```
+
+**2. How to create it on GitHub.com:**
+- Go to `https://github.com/cyash24f3/tds`
+- Click **"Add file" → "Create new file"**
+- In the filename box type: `.github/workflows/hello.yml`
+- Paste the YAML above
+- Click **"Commit changes"**
+
+The commit itself will trigger the action (since it triggers on `push`). You can also re-run it anytime via **Actions → Hello World → Run workflow**.
+
+**3. Verify it ran:**
+- Go to `https://github.com/cyash24f3/tds/actions`
+- You should see a green ✅ run at the top
+
+**Your repository URL to submit:**
+```
+https://github.com/cyash24f3/tds
