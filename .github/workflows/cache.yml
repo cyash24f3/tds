@@ -19,7 +19,4 @@ jobs:
           key: cache-1ad7459
 
       - name: prime-cache-1ad7459
-        run: |
-          echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
-          mkdir -p ~/.cache/dependencies
-          echo "dependencies cached" > ~/.cache/dependencies/deps.txt
+        run: echo "Cache hit ${{ steps.cache-step.outputs.cache-hit }}"
